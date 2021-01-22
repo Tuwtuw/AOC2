@@ -1,0 +1,46 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\School\AOC 2\Pratica 1\simulation\modelsim
+vPratica1
+!i10b 1
+!s100 9W]8IelO;E?WG@oMkiW`L3
+I`1;Ue>a7iEe^L4>J2JhZY0
+V_442LkSW3HO6I_VMN>4Mj0
+Z1 dE:\School\AOC 2\Pratica 1\simulation\modelsim
+w1611276577
+8E:/School/AOC 2/Pratica 1/Pratica1.v
+FE:/School/AOC 2/Pratica 1/Pratica1.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1611277053.010000
+!s107 E:/School/AOC 2/Pratica 1/Pratica1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/School/AOC 2/Pratica 1|E:/School/AOC 2/Pratica 1/Pratica1.v|
+!s101 -O0
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work {+incdir+E:/School/AOC 2/Pratica 1} -O0
+n@pratica1
+vramlpm
+IYB1G4>DT[;;Ol?WNGJ^_f3
+VV9SFz25VHO3:PDPmiP1Z>2
+R1
+w1611275154
+8E:/School/AOC 2/Pratica 1/ramlpm.v
+FE:/School/AOC 2/Pratica 1/ramlpm.v
+L0 39
+R2
+r1
+31
+R3
+!i10b 1
+!s100 U9Rj1fOM94X8z4B6enISL2
+!s85 0
+!s108 1611277052.901000
+!s107 E:/School/AOC 2/Pratica 1/ramlpm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/School/AOC 2/Pratica 1|E:/School/AOC 2/Pratica 1/ramlpm.v|
+!s101 -O0
+R4

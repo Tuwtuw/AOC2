@@ -1,0 +1,797 @@
+TimeQuest Timing Analyzer report for Pratica1
+Thu Jan 21 21:49:58 2021
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Hold: 'clock'
+ 13. Slow Model Minimum Pulse Width: 'clock'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clock'
+ 24. Fast Model Hold: 'clock'
+ 25. Fast Model Minimum Pulse Width: 'clock'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; Pratica1                                           ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C35F672C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                           ;
++------------+-----------------+------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                  ;
++------------+-----------------+------------+-------------------------------------------------------+
+; 343.17 MHz ; 235.07 MHz      ; clock      ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -1.914 ; -15.312       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 2.645 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.627 ; -89.238               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                                                                                                                                                                                            ;
++--------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                 ; To Node                                                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.914 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg0 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.025     ; 2.854      ;
+; -1.914 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg1 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a1~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.025     ; 2.854      ;
+; -1.914 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg2 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a2~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.025     ; 2.854      ;
+; -1.914 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg3 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a3~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.025     ; 2.854      ;
+; -1.914 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg4 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a4~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.025     ; 2.854      ;
+; -1.914 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg5 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a5~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.025     ; 2.854      ;
+; -1.914 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg6 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a6~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.025     ; 2.854      ;
+; -1.914 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg7 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a7~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.025     ; 2.854      ;
++--------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                                                                                                                                                            ;
++-------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                                 ; To Node                                                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 2.645 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg0 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.025     ; 2.854      ;
+; 2.645 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg1 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a1~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.025     ; 2.854      ;
+; 2.645 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg2 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a2~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.025     ; 2.854      ;
+; 2.645 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg3 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a3~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.025     ; 2.854      ;
+; 2.645 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg4 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a4~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.025     ; 2.854      ;
+; 2.645 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg5 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a5~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.025     ; 2.854      ;
+; 2.645 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg6 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a6~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.025     ; 2.854      ;
+; 2.645 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg7 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a7~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.025     ; 2.854      ;
++-------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                                                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                                                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]                                                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|inclk[0]                                                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|outclk                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|outclk                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; ram1|altsyncram_component|auto_generated|ram_block1a0|clk0                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; ram1|altsyncram_component|auto_generated|ram_block1a0|clk0                                                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; data[*]       ; clock      ; 3.638 ; 3.638 ; Rise       ; clock           ;
+;  data[0]      ; clock      ; 0.015 ; 0.015 ; Rise       ; clock           ;
+;  data[1]      ; clock      ; 3.387 ; 3.387 ; Rise       ; clock           ;
+;  data[2]      ; clock      ; 3.638 ; 3.638 ; Rise       ; clock           ;
+;  data[3]      ; clock      ; 3.635 ; 3.635 ; Rise       ; clock           ;
+;  data[4]      ; clock      ; 3.618 ; 3.618 ; Rise       ; clock           ;
+;  data[5]      ; clock      ; 3.416 ; 3.416 ; Rise       ; clock           ;
+;  data[6]      ; clock      ; 3.384 ; 3.384 ; Rise       ; clock           ;
+;  data[7]      ; clock      ; 3.625 ; 3.625 ; Rise       ; clock           ;
+; rdaddress[*]  ; clock      ; 3.630 ; 3.630 ; Rise       ; clock           ;
+;  rdaddress[0] ; clock      ; 3.156 ; 3.156 ; Rise       ; clock           ;
+;  rdaddress[1] ; clock      ; 3.630 ; 3.630 ; Rise       ; clock           ;
+;  rdaddress[2] ; clock      ; 3.142 ; 3.142 ; Rise       ; clock           ;
+;  rdaddress[3] ; clock      ; 3.404 ; 3.404 ; Rise       ; clock           ;
+;  rdaddress[4] ; clock      ; 3.373 ; 3.373 ; Rise       ; clock           ;
+; wraddress[*]  ; clock      ; 3.669 ; 3.669 ; Rise       ; clock           ;
+;  wraddress[0] ; clock      ; 3.422 ; 3.422 ; Rise       ; clock           ;
+;  wraddress[1] ; clock      ; 3.498 ; 3.498 ; Rise       ; clock           ;
+;  wraddress[2] ; clock      ; 3.669 ; 3.669 ; Rise       ; clock           ;
+;  wraddress[3] ; clock      ; 3.166 ; 3.166 ; Rise       ; clock           ;
+;  wraddress[4] ; clock      ; 3.184 ; 3.184 ; Rise       ; clock           ;
+; wren          ; clock      ; 0.332 ; 0.332 ; Rise       ; clock           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; data[*]       ; clock      ; 0.254  ; 0.254  ; Rise       ; clock           ;
+;  data[0]      ; clock      ; 0.254  ; 0.254  ; Rise       ; clock           ;
+;  data[1]      ; clock      ; -3.118 ; -3.118 ; Rise       ; clock           ;
+;  data[2]      ; clock      ; -3.369 ; -3.369 ; Rise       ; clock           ;
+;  data[3]      ; clock      ; -3.366 ; -3.366 ; Rise       ; clock           ;
+;  data[4]      ; clock      ; -3.349 ; -3.349 ; Rise       ; clock           ;
+;  data[5]      ; clock      ; -3.147 ; -3.147 ; Rise       ; clock           ;
+;  data[6]      ; clock      ; -3.115 ; -3.115 ; Rise       ; clock           ;
+;  data[7]      ; clock      ; -3.356 ; -3.356 ; Rise       ; clock           ;
+; rdaddress[*]  ; clock      ; -2.873 ; -2.873 ; Rise       ; clock           ;
+;  rdaddress[0] ; clock      ; -2.887 ; -2.887 ; Rise       ; clock           ;
+;  rdaddress[1] ; clock      ; -3.361 ; -3.361 ; Rise       ; clock           ;
+;  rdaddress[2] ; clock      ; -2.873 ; -2.873 ; Rise       ; clock           ;
+;  rdaddress[3] ; clock      ; -3.135 ; -3.135 ; Rise       ; clock           ;
+;  rdaddress[4] ; clock      ; -3.104 ; -3.104 ; Rise       ; clock           ;
+; wraddress[*]  ; clock      ; -2.897 ; -2.897 ; Rise       ; clock           ;
+;  wraddress[0] ; clock      ; -3.153 ; -3.153 ; Rise       ; clock           ;
+;  wraddress[1] ; clock      ; -3.229 ; -3.229 ; Rise       ; clock           ;
+;  wraddress[2] ; clock      ; -3.400 ; -3.400 ; Rise       ; clock           ;
+;  wraddress[3] ; clock      ; -2.897 ; -2.897 ; Rise       ; clock           ;
+;  wraddress[4] ; clock      ; -2.915 ; -2.915 ; Rise       ; clock           ;
+; wren          ; clock      ; -0.063 ; -0.063 ; Rise       ; clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; q[*]      ; clock      ; 10.329 ; 10.329 ; Rise       ; clock           ;
+;  q[0]     ; clock      ; 9.963  ; 9.963  ; Rise       ; clock           ;
+;  q[1]     ; clock      ; 9.758  ; 9.758  ; Rise       ; clock           ;
+;  q[2]     ; clock      ; 10.198 ; 10.198 ; Rise       ; clock           ;
+;  q[3]     ; clock      ; 9.972  ; 9.972  ; Rise       ; clock           ;
+;  q[4]     ; clock      ; 10.213 ; 10.213 ; Rise       ; clock           ;
+;  q[5]     ; clock      ; 9.968  ; 9.968  ; Rise       ; clock           ;
+;  q[6]     ; clock      ; 10.056 ; 10.056 ; Rise       ; clock           ;
+;  q[7]     ; clock      ; 10.329 ; 10.329 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; q[*]      ; clock      ; 9.758  ; 9.758  ; Rise       ; clock           ;
+;  q[0]     ; clock      ; 9.963  ; 9.963  ; Rise       ; clock           ;
+;  q[1]     ; clock      ; 9.758  ; 9.758  ; Rise       ; clock           ;
+;  q[2]     ; clock      ; 10.198 ; 10.198 ; Rise       ; clock           ;
+;  q[3]     ; clock      ; 9.972  ; 9.972  ; Rise       ; clock           ;
+;  q[4]     ; clock      ; 10.213 ; 10.213 ; Rise       ; clock           ;
+;  q[5]     ; clock      ; 9.968  ; 9.968  ; Rise       ; clock           ;
+;  q[6]     ; clock      ; 10.056 ; 10.056 ; Rise       ; clock           ;
+;  q[7]     ; clock      ; 10.329 ; 10.329 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -1.460 ; -11.680       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 2.321 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.627 ; -89.238               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                                                                                                                                                                            ;
++--------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                 ; To Node                                                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.460 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg0 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg1 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a1~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg2 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a2~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg3 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a3~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg4 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a4~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg5 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a5~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg6 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a6~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg7 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a7~porta_memory_reg0 ; clock        ; clock       ; 1.000        ; -0.017     ; 2.442      ;
++--------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                                                                                                                                                                            ;
++-------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                                 ; To Node                                                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 2.321 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg0 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.017     ; 2.442      ;
+; 2.321 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg1 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a1~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.017     ; 2.442      ;
+; 2.321 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg2 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a2~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.017     ; 2.442      ;
+; 2.321 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg3 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a3~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.017     ; 2.442      ;
+; 2.321 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg4 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a4~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.017     ; 2.442      ;
+; 2.321 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg5 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a5~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.017     ; 2.442      ;
+; 2.321 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg6 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a6~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.017     ; 2.442      ;
+; 2.321 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg7 ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a7~porta_memory_reg0 ; clock        ; clock       ; 0.000        ; -0.017     ; 2.442      ;
++-------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                                                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; clock ; Rise       ; ramlpm:ram1|altsyncram:altsyncram_component|altsyncram_voq1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                                                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]                                                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|inclk[0]                                                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|outclk                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|outclk                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; ram1|altsyncram_component|auto_generated|ram_block1a0|clk0                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; ram1|altsyncram_component|auto_generated|ram_block1a0|clk0                                                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; data[*]       ; clock      ; 1.901  ; 1.901  ; Rise       ; clock           ;
+;  data[0]      ; clock      ; -0.307 ; -0.307 ; Rise       ; clock           ;
+;  data[1]      ; clock      ; 1.778  ; 1.778  ; Rise       ; clock           ;
+;  data[2]      ; clock      ; 1.901  ; 1.901  ; Rise       ; clock           ;
+;  data[3]      ; clock      ; 1.895  ; 1.895  ; Rise       ; clock           ;
+;  data[4]      ; clock      ; 1.892  ; 1.892  ; Rise       ; clock           ;
+;  data[5]      ; clock      ; 1.802  ; 1.802  ; Rise       ; clock           ;
+;  data[6]      ; clock      ; 1.776  ; 1.776  ; Rise       ; clock           ;
+;  data[7]      ; clock      ; 1.889  ; 1.889  ; Rise       ; clock           ;
+; rdaddress[*]  ; clock      ; 1.918  ; 1.918  ; Rise       ; clock           ;
+;  rdaddress[0] ; clock      ; 1.694  ; 1.694  ; Rise       ; clock           ;
+;  rdaddress[1] ; clock      ; 1.918  ; 1.918  ; Rise       ; clock           ;
+;  rdaddress[2] ; clock      ; 1.682  ; 1.682  ; Rise       ; clock           ;
+;  rdaddress[3] ; clock      ; 1.814  ; 1.814  ; Rise       ; clock           ;
+;  rdaddress[4] ; clock      ; 1.791  ; 1.791  ; Rise       ; clock           ;
+; wraddress[*]  ; clock      ; 1.928  ; 1.928  ; Rise       ; clock           ;
+;  wraddress[0] ; clock      ; 1.812  ; 1.812  ; Rise       ; clock           ;
+;  wraddress[1] ; clock      ; 1.882  ; 1.882  ; Rise       ; clock           ;
+;  wraddress[2] ; clock      ; 1.928  ; 1.928  ; Rise       ; clock           ;
+;  wraddress[3] ; clock      ; 1.683  ; 1.683  ; Rise       ; clock           ;
+;  wraddress[4] ; clock      ; 1.698  ; 1.698  ; Rise       ; clock           ;
+; wren          ; clock      ; -0.175 ; -0.175 ; Rise       ; clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; data[*]       ; clock      ; 0.446  ; 0.446  ; Rise       ; clock           ;
+;  data[0]      ; clock      ; 0.446  ; 0.446  ; Rise       ; clock           ;
+;  data[1]      ; clock      ; -1.639 ; -1.639 ; Rise       ; clock           ;
+;  data[2]      ; clock      ; -1.762 ; -1.762 ; Rise       ; clock           ;
+;  data[3]      ; clock      ; -1.756 ; -1.756 ; Rise       ; clock           ;
+;  data[4]      ; clock      ; -1.753 ; -1.753 ; Rise       ; clock           ;
+;  data[5]      ; clock      ; -1.663 ; -1.663 ; Rise       ; clock           ;
+;  data[6]      ; clock      ; -1.637 ; -1.637 ; Rise       ; clock           ;
+;  data[7]      ; clock      ; -1.750 ; -1.750 ; Rise       ; clock           ;
+; rdaddress[*]  ; clock      ; -1.543 ; -1.543 ; Rise       ; clock           ;
+;  rdaddress[0] ; clock      ; -1.555 ; -1.555 ; Rise       ; clock           ;
+;  rdaddress[1] ; clock      ; -1.779 ; -1.779 ; Rise       ; clock           ;
+;  rdaddress[2] ; clock      ; -1.543 ; -1.543 ; Rise       ; clock           ;
+;  rdaddress[3] ; clock      ; -1.675 ; -1.675 ; Rise       ; clock           ;
+;  rdaddress[4] ; clock      ; -1.652 ; -1.652 ; Rise       ; clock           ;
+; wraddress[*]  ; clock      ; -1.544 ; -1.544 ; Rise       ; clock           ;
+;  wraddress[0] ; clock      ; -1.673 ; -1.673 ; Rise       ; clock           ;
+;  wraddress[1] ; clock      ; -1.743 ; -1.743 ; Rise       ; clock           ;
+;  wraddress[2] ; clock      ; -1.789 ; -1.789 ; Rise       ; clock           ;
+;  wraddress[3] ; clock      ; -1.544 ; -1.544 ; Rise       ; clock           ;
+;  wraddress[4] ; clock      ; -1.559 ; -1.559 ; Rise       ; clock           ;
+; wren          ; clock      ; 0.314  ; 0.314  ; Rise       ; clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; q[*]      ; clock      ; 6.146 ; 6.146 ; Rise       ; clock           ;
+;  q[0]     ; clock      ; 5.954 ; 5.954 ; Rise       ; clock           ;
+;  q[1]     ; clock      ; 5.873 ; 5.873 ; Rise       ; clock           ;
+;  q[2]     ; clock      ; 6.068 ; 6.068 ; Rise       ; clock           ;
+;  q[3]     ; clock      ; 5.965 ; 5.965 ; Rise       ; clock           ;
+;  q[4]     ; clock      ; 6.081 ; 6.081 ; Rise       ; clock           ;
+;  q[5]     ; clock      ; 5.961 ; 5.961 ; Rise       ; clock           ;
+;  q[6]     ; clock      ; 6.019 ; 6.019 ; Rise       ; clock           ;
+;  q[7]     ; clock      ; 6.146 ; 6.146 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; q[*]      ; clock      ; 5.873 ; 5.873 ; Rise       ; clock           ;
+;  q[0]     ; clock      ; 5.954 ; 5.954 ; Rise       ; clock           ;
+;  q[1]     ; clock      ; 5.873 ; 5.873 ; Rise       ; clock           ;
+;  q[2]     ; clock      ; 6.068 ; 6.068 ; Rise       ; clock           ;
+;  q[3]     ; clock      ; 5.965 ; 5.965 ; Rise       ; clock           ;
+;  q[4]     ; clock      ; 6.081 ; 6.081 ; Rise       ; clock           ;
+;  q[5]     ; clock      ; 5.961 ; 5.961 ; Rise       ; clock           ;
+;  q[6]     ; clock      ; 6.019 ; 6.019 ; Rise       ; clock           ;
+;  q[7]     ; clock      ; 6.146 ; 6.146 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.914  ; 2.321 ; N/A      ; N/A     ; -1.627              ;
+;  clock           ; -1.914  ; 2.321 ; N/A      ; N/A     ; -1.627              ;
+; Design-wide TNS  ; -15.312 ; 0.0   ; 0.0      ; 0.0     ; -89.238             ;
+;  clock           ; -15.312 ; 0.000 ; N/A      ; N/A     ; -89.238             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; data[*]       ; clock      ; 3.638 ; 3.638 ; Rise       ; clock           ;
+;  data[0]      ; clock      ; 0.015 ; 0.015 ; Rise       ; clock           ;
+;  data[1]      ; clock      ; 3.387 ; 3.387 ; Rise       ; clock           ;
+;  data[2]      ; clock      ; 3.638 ; 3.638 ; Rise       ; clock           ;
+;  data[3]      ; clock      ; 3.635 ; 3.635 ; Rise       ; clock           ;
+;  data[4]      ; clock      ; 3.618 ; 3.618 ; Rise       ; clock           ;
+;  data[5]      ; clock      ; 3.416 ; 3.416 ; Rise       ; clock           ;
+;  data[6]      ; clock      ; 3.384 ; 3.384 ; Rise       ; clock           ;
+;  data[7]      ; clock      ; 3.625 ; 3.625 ; Rise       ; clock           ;
+; rdaddress[*]  ; clock      ; 3.630 ; 3.630 ; Rise       ; clock           ;
+;  rdaddress[0] ; clock      ; 3.156 ; 3.156 ; Rise       ; clock           ;
+;  rdaddress[1] ; clock      ; 3.630 ; 3.630 ; Rise       ; clock           ;
+;  rdaddress[2] ; clock      ; 3.142 ; 3.142 ; Rise       ; clock           ;
+;  rdaddress[3] ; clock      ; 3.404 ; 3.404 ; Rise       ; clock           ;
+;  rdaddress[4] ; clock      ; 3.373 ; 3.373 ; Rise       ; clock           ;
+; wraddress[*]  ; clock      ; 3.669 ; 3.669 ; Rise       ; clock           ;
+;  wraddress[0] ; clock      ; 3.422 ; 3.422 ; Rise       ; clock           ;
+;  wraddress[1] ; clock      ; 3.498 ; 3.498 ; Rise       ; clock           ;
+;  wraddress[2] ; clock      ; 3.669 ; 3.669 ; Rise       ; clock           ;
+;  wraddress[3] ; clock      ; 3.166 ; 3.166 ; Rise       ; clock           ;
+;  wraddress[4] ; clock      ; 3.184 ; 3.184 ; Rise       ; clock           ;
+; wren          ; clock      ; 0.332 ; 0.332 ; Rise       ; clock           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; data[*]       ; clock      ; 0.446  ; 0.446  ; Rise       ; clock           ;
+;  data[0]      ; clock      ; 0.446  ; 0.446  ; Rise       ; clock           ;
+;  data[1]      ; clock      ; -1.639 ; -1.639 ; Rise       ; clock           ;
+;  data[2]      ; clock      ; -1.762 ; -1.762 ; Rise       ; clock           ;
+;  data[3]      ; clock      ; -1.756 ; -1.756 ; Rise       ; clock           ;
+;  data[4]      ; clock      ; -1.753 ; -1.753 ; Rise       ; clock           ;
+;  data[5]      ; clock      ; -1.663 ; -1.663 ; Rise       ; clock           ;
+;  data[6]      ; clock      ; -1.637 ; -1.637 ; Rise       ; clock           ;
+;  data[7]      ; clock      ; -1.750 ; -1.750 ; Rise       ; clock           ;
+; rdaddress[*]  ; clock      ; -1.543 ; -1.543 ; Rise       ; clock           ;
+;  rdaddress[0] ; clock      ; -1.555 ; -1.555 ; Rise       ; clock           ;
+;  rdaddress[1] ; clock      ; -1.779 ; -1.779 ; Rise       ; clock           ;
+;  rdaddress[2] ; clock      ; -1.543 ; -1.543 ; Rise       ; clock           ;
+;  rdaddress[3] ; clock      ; -1.675 ; -1.675 ; Rise       ; clock           ;
+;  rdaddress[4] ; clock      ; -1.652 ; -1.652 ; Rise       ; clock           ;
+; wraddress[*]  ; clock      ; -1.544 ; -1.544 ; Rise       ; clock           ;
+;  wraddress[0] ; clock      ; -1.673 ; -1.673 ; Rise       ; clock           ;
+;  wraddress[1] ; clock      ; -1.743 ; -1.743 ; Rise       ; clock           ;
+;  wraddress[2] ; clock      ; -1.789 ; -1.789 ; Rise       ; clock           ;
+;  wraddress[3] ; clock      ; -1.544 ; -1.544 ; Rise       ; clock           ;
+;  wraddress[4] ; clock      ; -1.559 ; -1.559 ; Rise       ; clock           ;
+; wren          ; clock      ; 0.314  ; 0.314  ; Rise       ; clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; q[*]      ; clock      ; 10.329 ; 10.329 ; Rise       ; clock           ;
+;  q[0]     ; clock      ; 9.963  ; 9.963  ; Rise       ; clock           ;
+;  q[1]     ; clock      ; 9.758  ; 9.758  ; Rise       ; clock           ;
+;  q[2]     ; clock      ; 10.198 ; 10.198 ; Rise       ; clock           ;
+;  q[3]     ; clock      ; 9.972  ; 9.972  ; Rise       ; clock           ;
+;  q[4]     ; clock      ; 10.213 ; 10.213 ; Rise       ; clock           ;
+;  q[5]     ; clock      ; 9.968  ; 9.968  ; Rise       ; clock           ;
+;  q[6]     ; clock      ; 10.056 ; 10.056 ; Rise       ; clock           ;
+;  q[7]     ; clock      ; 10.329 ; 10.329 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; q[*]      ; clock      ; 5.873 ; 5.873 ; Rise       ; clock           ;
+;  q[0]     ; clock      ; 5.954 ; 5.954 ; Rise       ; clock           ;
+;  q[1]     ; clock      ; 5.873 ; 5.873 ; Rise       ; clock           ;
+;  q[2]     ; clock      ; 6.068 ; 6.068 ; Rise       ; clock           ;
+;  q[3]     ; clock      ; 5.965 ; 5.965 ; Rise       ; clock           ;
+;  q[4]     ; clock      ; 6.081 ; 6.081 ; Rise       ; clock           ;
+;  q[5]     ; clock      ; 5.961 ; 5.961 ; Rise       ; clock           ;
+;  q[6]     ; clock      ; 6.019 ; 6.019 ; Rise       ; clock           ;
+;  q[7]     ; clock      ; 6.146 ; 6.146 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 8        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 8        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 19    ; 19   ;
+; Unconstrained Input Port Paths  ; 19    ; 19   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 40    ; 40   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Thu Jan 21 21:49:57 2021
+Info: Command: quartus_sta Pratica1 -c Pratica1
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Pratica1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.914
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.914       -15.312 clock 
+Info (332146): Worst-case hold slack is 2.645
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     2.645         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.627
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.627       -89.238 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.460
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.460       -11.680 clock 
+Info (332146): Worst-case hold slack is 2.321
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     2.321         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.627
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.627       -89.238 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4551 megabytes
+    Info: Processing ended: Thu Jan 21 21:49:58 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,236 @@
+# Reading H:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do Pratica1_Part2_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying H:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied H:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/School/AOC\ 2/Pratica1_Part2 {E:/School/AOC 2/Pratica1_Part2/Pratica1_Part2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Pratica1_Part2
+# 
+# Top level modules:
+# 	Pratica1_Part2
+# vlog -vlog01compat -work work +incdir+E:/School/AOC\ 2/Pratica1_Part2 {E:/School/AOC 2/Pratica1_Part2/ramlpm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ramlpm
+# 
+# Top level modules:
+# 	ramlpm
+# 
+vsim +altera -L altera_mf_ver -do Pratica1_Part2_run_msim_rtl_verilog.do -l msim_transcript -gui work.Pratica1_Part2
+# vsim +altera -L altera_mf_ver -do Pratica1_Part2_run_msim_rtl_verilog.do -l msim_transcript -gui work.Pratica1_Part2 
+# Loading work.Pratica1_Part2
+# Loading work.ramlpm
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# do Pratica1_Part2_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/School/AOC\ 2/Pratica1_Part2 {E:/School/AOC 2/Pratica1_Part2/Pratica1_Part2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Pratica1_Part2
+# 
+# Top level modules:
+# 	Pratica1_Part2
+# vlog -vlog01compat -work work +incdir+E:/School/AOC\ 2/Pratica1_Part2 {E:/School/AOC 2/Pratica1_Part2/ramlpm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ramlpm
+# 
+# Top level modules:
+# 	ramlpm
+# 
+do {E:/School/AOC 2/Pratica1_Part2/simulation/modelsim/sim_part01.do}
+# ** Error: (vish-4014) No objects found matching '/Pratica1/clock'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 3
+# ** Error: (vish-4014) No objects found matching '/Pratica1/data'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 4
+# ** Error: (vish-4014) No objects found matching '/Pratica1/wraddress'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 5
+# ** Error: (vish-4014) No objects found matching '/Pratica1/wren'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 6
+# ** Error: (vish-4014) No objects found matching '/Pratica1/rdaddress'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 7
+# ** Error: (vish-4014) No objects found matching '/Pratica1/q'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 8
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Error: (vish-4026) Value "hiz" does not represent a literal of the enumeration type.
+#Invalid value to -initialvalue switch: HiZ
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 29
+# ** Error: Value length (1) does not equal array index length (8).
+# 
+#Invalid value to -value switch: 0
+# Usage: wave create -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 30
+# 0
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 32
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 33
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 35
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 36
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 37
+# ** Error: Value length (1) does not equal array index length (5).
+# 
+#Invalid value to -value switch: 0
+# Usage: wave create -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 38
+# 0
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 40
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 41
+# ** Error: Value length (1) does not equal array index length (5).
+# 
+#Invalid value to -value switch: 0
+# Usage: wave create -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 42
+# 0
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 44
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 45
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 46
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 47
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 48
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 49
+# ** Error: invalid command name "wave export -file {E:/School/AOC 2/Pratica 1/Docs/WaveForm/sim_part01} -starttime 0 -endtime 1000 -format vlog -designunit Pratica1"
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 50
+# 0
+do {E:/School/AOC 2/Pratica1_Part2/simulation/modelsim/sim_part01.do}
+# ** Error: (vish-4014) No objects found matching '/Pratica1/clock'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 3
+# ** Error: (vish-4014) No objects found matching '/Pratica1/data'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 4
+# ** Error: (vish-4014) No objects found matching '/Pratica1/wraddress'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 5
+# ** Error: (vish-4014) No objects found matching '/Pratica1/wren'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 6
+# ** Error: (vish-4014) No objects found matching '/Pratica1/rdaddress'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 7
+# ** Error: (vish-4014) No objects found matching '/Pratica1/q'.
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 8
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Error: (vish-4026) Value "hiz" does not represent a literal of the enumeration type.
+#Invalid value to -initialvalue switch: HiZ
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 29
+# ** Error: Value length (1) does not equal array index length (8).
+# 
+#Invalid value to -value switch: 0
+# Usage: wave create -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 30
+# 0
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 32
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 33
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 35
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 36
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 37
+# ** Error: Value length (1) does not equal array index length (5).
+# 
+#Invalid value to -value switch: 0
+# Usage: wave create -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 38
+# 0
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 40
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 41
+# ** Error: Value length (1) does not equal array index length (5).
+# 
+#Invalid value to -value switch: 0
+# Usage: wave create -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 42
+# 0
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 44
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 45
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 46
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 47
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 48
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 49
+# ** Error: invalid command name "wave export -file {E:/School/AOC 2/Pratica 1/Docs/WaveForm/sim_part01} -starttime 0 -endtime 1000 -format vlog -designunit Pratica1"
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 50
+# 0
+do {E:/School/AOC 2/Pratica1_Part2/simulation/modelsim/sim_part01.do}
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
+# 1
+# ** Error: invalid command name "wave export -file {E:/School/AOC 2/Pratica 1/Docs/WaveForm/sim_part01} -starttime 0 -endtime 1000 -format vlog -designunit Pratica1_Part2"
+# Executing ONERROR command at macro E:\School\AOC 2\Pratica1_Part2\simulation\modelsim\sim_part01.do line 50
+# 1
+run -all
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: Pratica1_Part2.ram1.altsyncram_component
+wave create -driver freeze -pattern clock -initialvalue Pu1 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/Pratica1_Part2/clock
+wave modify -driver freeze -pattern clock -initialvalue Pu1 -period 100ps -dutycycle 50 -starttime 25ps -endtime 1000ps Edit:/Pratica1_Part2/clock
+wave create -driver freeze -pattern counter -startvalue 00000 -endvalue 11111 -type Range -direction Up -period 100ps -step 1 -repeat forever -range 4 0 -starttime 0ps -endtime 3200ps sim:/Pratica1_Part2/rdaddress
+wave modify -driver freeze -pattern clock -initialvalue Pu1 -period 100ps -dutycycle 50 -starttime 25ps -endtime 3200ps Edit:/Pratica1_Part2/clock
+add wave -position insertpoint  \
+sim:/Pratica1_Part2/q
+restart
+# Loading work.Pratica1_Part2
+# Loading work.ramlpm
+run -all
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: Pratica1_Part2.ram1.altsyncram_component
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {E:/School/AOC 2/Pratica1_Part2/simulation/modelsim/sim_part01.do}
+wave editwrite -file {E:/School/AOC 2/Pratica1_Part2/simulation/modelsim/sim_part01.do} -append
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {E:/School/AOC 2/Pratica1_Part2/Docs/sim_part02.do}
+wave editwrite -file {E:/School/AOC 2/Pratica1_Part2/Docs/sim_part02.do} -append
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {E:/School/AOC 2/Pratica1_Part2/simulation/modelsim/sim_part02.do}
+wave editwrite -file {E:/School/AOC 2/Pratica1_Part2/simulation/modelsim/sim_part02.do} -append
